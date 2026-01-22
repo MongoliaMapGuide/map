@@ -11,7 +11,7 @@ An advanced, interactive digital map designed to help both domestic and internat
 
 ## ✨ Key Features
 
-- **📍 Extensive Database:** Over 1,390+ points of interest, including 404 historical/natural sites and 990 tourist camps.
+- **📍 Extensive Database:** Over 1,436+ points of interest, including 410 historical/natural sites and 1026 tourist camps.
 - **🌍 Multilingual Support:** Popups feature information in 6 languages: **Mongolian, English, Korean, Japanese, Chinese, and Russian**.
 - **🔍 Smart Search:** Easily find any destination by name using the integrated search bar.
 - **🛰️ Multiple Map Layers:** Switch between **Standard Road Map**, **Google Satellite**, and **Terrain** views for better navigation.

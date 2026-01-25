@@ -41,7 +41,7 @@ We support the following languages to assist international travelers:
 ---
 
 ## 🚀 Хэрхэн ашиглах вэ? / How to Use
-1. **Шууд үзэх:** [bayarchoijil.github.io/map/](https://exploremongolia.github.io/map/) холбоосоор орно.
+1. **Шууд үзэх:** [exploremongolia.github.io/map/](https://exploremongolia.github.io/map/) холбоосоор орно.
 2. **Хайх:** Зүүн дээд буланд байгаа хайлтын цонхонд газар нутгийн нэрээ бичнэ.
 3. **Байршил:** Зүүн талын цэсний "Locate Me" товчийг дарж өөрийн байршлыг харна.
 

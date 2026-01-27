@@ -4,9 +4,9 @@
 
 
 ## 🌟 Төслийн тухай / About the Project
-**Mongolia Map Guide** нь Монгол орны байгаль, түүх, соёлын дурсгалт газрууд болон амралт, жуулчны баазуудыг нэгтгэсэн интерактив мэдээллийн сан юм. Нийт **1,438** объектыг багтаасан бөгөөд олон улсын аялагчдад зориулан 6 хэлний сонголттойгоор бүтээгдсэн.
+**Mongolia Map Guide** нь Монгол орны байгаль, түүх, соёлын дурсгалт газрууд болон амралт, жуулчны баазуудыг нэгтгэсэн интерактив мэдээллийн сан юм. Нийт **1,443** объектыг багтаасан бөгөөд олон улсын аялагчдад зориулан 6 хэлний сонголттойгоор бүтээгдсэн.
 
-**Mongolia Map Guide** is a comprehensive interactive platform featuring over **1,438** scenic spots, historical sites, and tourist camps across Mongolia. Designed for both domestic and international travelers, it provides seamless navigation in 6 languages.
+**Mongolia Map Guide** is a comprehensive interactive platform featuring over **1,443** scenic spots, historical sites, and tourist camps across Mongolia. Designed for both domestic and international travelers, it provides seamless navigation in 6 languages.
 
 ---
 

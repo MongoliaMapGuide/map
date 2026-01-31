@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travel-map-v2'; // v1 байсныг v2 болгох
+const CACHE_NAME = 'travel-map-v3'; // v1 байсныг v2 болгох
 const urlsToCache = [
   'index.html',
   'manifest.json'
@@ -13,5 +13,14 @@ self.addEventListener('install', event => {
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request).then(response => response || fetch(event.request))
+  );
+});
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(keys => Promise.all(
+      keys.map(key => {
+        if (key !== CACHE_NAME) return caches.delete(key); // Хуучин кэшийг устгах
+      })
+    ))
   );
 });

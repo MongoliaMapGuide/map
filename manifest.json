@@ -1,8 +1,8 @@
 {
   "name": "Mongolia Travel Map",
   "short_name": "TravelMap",
-  "start_url": "index.html",
-  "display": "minimal_ui",
+  "start_url": "https://mongoliamapguide.github.io/v_initial/index.html",
+  "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1a73e8",
   "icons": [
@@ -13,9 +13,10 @@
       "purpose": "any maskable"
     },
     {
-      "src": "logo.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "https://mongoliamapguide.github.io/v_initial/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }

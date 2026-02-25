@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travel-map-v31'; // v1 байсныг v2 болгох
+const CACHE_NAME = 'travel-map-v32'; // v1 байсныг v2 болгох
 const urlsToCache = [
   'index.html',
   'manifest.json'

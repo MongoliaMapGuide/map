@@ -49,6 +49,7 @@
 - **Frontend:** HTML5, CSS3, JavaScript (PWA)
 - **Hosting:** GitHub Pages
 
+<img width="853" height="1721" alt="Screenshot 2026-02-25 093333" src="https://github.com/user-attachments/assets/f3fd3cd1-5e7e-4e9f-8751-80def167ccaa" />
 ---
 
 ### 🚀 [View Live Project / Яг одоо үзэх](https://mongoliamapguide.github.io/map/)

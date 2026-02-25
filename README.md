@@ -21,7 +21,8 @@
 * **🌍 Multilingual:** Supports 🇲🇳, 🇺🇸, 🇰🇷, 🇯🇵, 🇨🇳, 🇷🇺.
 * **🛰️ Real-time GPS:** Visualize your position even in remote areas.
 * **📱 PWA Ready:** Installable on mobile devices with offline support.
-  
+<img width="1918" height="919" alt="Screenshot 2026-02-25 100438" src="https://github.com/user-attachments/assets/3df95d79-b3b2-469b-a58e-5f83a6d25168" />---
+ 
 
 ## 📲 Installation Guide / Суулгах заавар
 
@@ -36,11 +37,12 @@
 1. Open [**Mongolia Map Guide**](https://mongoliamapguide.github.io/map/) in Chrome.
 2. Tap the **three dots (⋮)** in the top right.
 3. Select **"Install app"** or **"Add to Home screen"**.
+   
 <p align="center">
   <img src="<img width="1918" height="919" alt="Screenshot 2026-02-25 100438" src="https://github.com/user-attachments/assets/3df95d79-b3b2-469b-a58e-5f83a6d25168" />---
 " width="750" alt="Mongolia Map Guide Desktop">
 </p>
-
+<img width="853" height="1721" alt="Screenshot 2026-02-25 093333" src="https://github.com/user-attachments/assets/c559e2e7-4571-446f-b868-7160202ae72d" />
 <p align="center">
   <img src="<img width="853" height="1721" alt="Screenshot 2026-02-25 093333" src="https://github.com/user-attachments/assets/c559e2e7-4571-446f-b868-7160202ae72d" />" width="300" alt="Mongolia Map Guide Mobile">
 </p>

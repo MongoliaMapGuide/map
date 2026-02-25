@@ -21,6 +21,7 @@
 * **🌍 Multilingual:** Supports 🇲🇳, 🇺🇸, 🇰🇷, 🇯🇵, 🇨🇳, 🇷🇺.
 * **🛰️ Real-time GPS:** Visualize your position even in remote areas.
 * **📱 PWA Ready:** Installable on mobile devices with offline support.
+<img width="1918" height="919" alt="Screenshot 2026-02-25 100438" src="https://github.com/user-attachments/assets/09232fac-1c44-4661-9175-0cf56cf73125" />
 
 ---
 

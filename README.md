@@ -21,8 +21,8 @@
 * **🌍 Multilingual:** Supports 🇲🇳, 🇺🇸, 🇰🇷, 🇯🇵, 🇨🇳, 🇷🇺.
 * **🛰️ Real-time GPS:** Visualize your position even in remote areas.
 * **📱 PWA Ready:** Installable on mobile devices with offline support.
-<img width="1918" height="919" alt="Screenshot 2026-02-25 100438" src="https://github.com/user-attachments/assets/09232fac-1c44-4661-9175-0cf56cf73125" />
-
+<img src="таны_үндсэн_зургийн_линк" width="700" alt="Mongolia Map Guide Desktop View">
+</p>
 ---
 
 ## 📲 Installation Guide / Суулгах заавар
@@ -38,8 +38,10 @@
 2. Tap the **three dots (⋮)** in the top right.
 3. Select **"Install app"** or **"Add to Home screen"**.
 
+<p align="center">
+  <img src="таны_утасны_зургийн_линк" width="300" alt="Mongolia Map Guide Mobile View">
+</p>
 
-<img width="853" height="1721" alt="Screenshot 2026-02-25 093333" src="https://github.com/user-attachments/assets/f3fd3cd1-5e7e-4e9f-8751-80def167ccaa" />
 ## 🛠️ Tech Stack / Технологийн шийдэл
 - **Language:** Python 3.x (Folium, Pandas)
 - **Frontend:** HTML5, CSS3, JavaScript (PWA)

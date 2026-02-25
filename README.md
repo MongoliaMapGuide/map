@@ -1,51 +1,49 @@
-🇲🇳 Mongolia Map Guide: Interactive Travel Platform
-Your definitive digital companion for exploring the Land of the Eternal Blue Sky.
-🌟 Төслийн тухай / About the Project
-Mongolia Map Guide нь Монгол орны байгаль, түүх, соёлын дурсгалт газрууд болон амралт, жуулчны баазуудыг нэгтгэсэн интерактив мэдээллийн сан юм. Нийт 1,484 объектыг багтаасан бөгөөд олон улсын аялагчдад зориулан 6 хэлний сонголттойгоор бүтээгдсэн.
+# 🇲🇳 Mongolia Map Guide: Interactive Travel Platform
 
-Mongolia Map Guide is a comprehensive interactive platform featuring over 1,484 scenic spots, historical sites, and tourist camps across Mongolia. Designed for both domestic and international travelers, it provides seamless navigation in 6 languages.
+> **Your definitive digital companion for exploring the Land of the Eternal Blue Sky.**
+> *Монгол орныг танин мэдэх таны хамгийн шилдэг дижитал хөтөч.*
 
-🌍 Multilingual Support (6 Languages)
-Бид дэлхийн өнцөг булан бүрээс ирэх жуулчдад зориулж дараах хэлүүдийг дэмждэг: We support the following languages to assist global explorers:
+[![GitHub Pages](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=github)](https://mongoliamapguide.github.io/map/)
+[![PWA Ready](https://img.shields.io/badge/PWA-Ready-blue?style=for-the-badge&logo=pwa)](https://mongoliamapguide.github.io/map/)
 
-Flag	Language	Native Name
-🇲🇳	Mongolian	Монгол
-🇺🇸	English	English
-🇰🇷	Korean	한국어
-🇯🇵	Japanese	日本語
-🇨🇳	Chinese	中文
-🇷🇺	Russian	Русский
-✨ Гол онцлогууд / Key Features
-🔍 Smart Multilingual Search
-Газар нутгийн нэрийг Монгол, Англи хэлээр хайж олох боломжтой.
+---
 
-Search for locations effortlessly using both Mongolian and English names.
+## 🌟 About the Project / Төслийн тухай
+**Mongolia Map Guide** is a comprehensive interactive platform featuring over **1,484** scenic spots, historical sites, and tourist camps across Mongolia. Designed for both domestic and international travelers, it provides seamless navigation in **6 languages**.
 
-📍 Detailed Points of Interest (POIs)
-Бидний өгөгдлийн сан дараах мэдээллийг агуулна:
+*Монгол орны байгаль, түүх, соёлын дурсгалт газрууд болон амралт, жуулчны баазуудыг нэгтгэсэн интерактив мэдээллийн сан юм. Нийт 1,484 объектыг багтаасан.*
 
-1,028 – Амралт сувилал, аялал жуулчлалын баазууд (Resorts and camps)
+---
 
-413 – Байгалийн болон түүхэн дурсгалт газрууд (Natural and historical landmarks)
+## ✨ Key Features / Гол онцлогууд
+* **🔍 Smart Search:** Search effortlessly in Mongolian & English.
+* **📍 1,484+ POIs:** Detailed database of resorts, landmarks, and transport hubs.
+* **🌍 Multilingual:** Supports 🇲🇳, 🇺🇸, 🇰🇷, 🇯🇵, 🇨🇳, 🇷🇺.
+* **🛰️ Real-time GPS:** Visualize your position even in remote areas.
+* **📱 PWA Ready:** Installable on mobile devices with offline support.
 
-43 – Тээврийн зангилаа, нисэх буудал болон хилийн боомтууд (Transport hubs and border crossings)
+---
 
-🛰️ Live Location & Navigation
-One-Click Navigation: Google Maps-тай шууд холбогдож зам заах функц. (Integrated with Google Maps for instant route planning.)
+## 📲 Installation Guide / Суулгах заавар
 
-Real-time GPS: Хөдөө хээр явахдаа өөрийн байршлыг газрын зураг дээр харах боломж. (Real-time GPS tracking to visualize your position in remote areas.)
+### **For iPhone / iOS (Safari):**
+1. Open [**Mongolia Map Guide**](https://mongoliamapguide.github.io/map/) in Safari.
+2. Tap the **"Share"** button (square with an upward arrow).
+3. Scroll down and select **"Add to Home Screen"**.
+4. Tap **"Add"**.
 
-📱 PWA Ready (Offline Mode)
-Энэхүү систем нь гар утсанд апп хэлбэрээр суух боломжтой бөгөөд сүлжээгүй орчинд ч газрын зургийг харах "Service Worker" технологиор тоноглогдсон.
+### **For Android (Chrome):**
+1. Open [**Mongolia Map Guide**](https://mongoliamapguide.github.io/map/) in Chrome.
+2. Tap the **three dots (⋮)** in the top right.
+3. Select **"Install app"** or **"Add to Home screen"**.
 
-🛠️ Технологийн шийдэл / Tech Stack
-Language: Python 3.x
+---
 
-Libraries: Folium, Pandas, Branca
+## 🛠️ Tech Stack / Технологийн шийдэл
+- **Language:** Python 3.x (Folium, Pandas)
+- **Frontend:** HTML5, CSS3, JavaScript (PWA)
+- **Hosting:** GitHub Pages
 
-Web Tech: HTML5, CSS3, JavaScript (PWA Integration)
+---
 
-Hosting: GitHub Pages
-
-🚀 Яг одоо үзэх / View Live Project:
-[🔗 https://mongoliamapguide.github.io/map/]
+### 🚀 [View Live Project / Яг одоо үзэх](https://mongoliamapguide.github.io/map/)

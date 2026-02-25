@@ -38,11 +38,7 @@
 2. Tap the **three dots (⋮)** in the top right.
 3. Select **"Install app"** or **"Add to Home screen"**.
 
-#### **Installation Preview / Суулгасан байдал:**
-<p align="center">
-  <img src="ТАНЫ_УТАСНЫ_СКРИЙНШОТ_ЛИНК" width="300" alt="Mobile App Icon Preview">
-</p>
-<p align="center"><i>How the app icon looks on your home screen / Таны гар утсан дээр апп ингэж харагдана.</i></p>---
+
 <img width="853" height="1721" alt="Screenshot 2026-02-25 093333" src="https://github.com/user-attachments/assets/f3fd3cd1-5e7e-4e9f-8751-80def167ccaa" />
 ## 🛠️ Tech Stack / Технологийн шийдэл
 - **Language:** Python 3.x (Folium, Pandas)

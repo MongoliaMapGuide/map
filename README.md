@@ -23,7 +23,7 @@
 * **📱 PWA Ready:** Installable on mobile devices with offline support.
 <img src="таны_үндсэн_зургийн_линк" width="700" alt="Mongolia Map Guide Desktop View">
 </p>
----
+<img width="1918" height="919" alt="Screenshot 2026-02-25 100438" src="https://github.com/user-attachments/assets/3df95d79-b3b2-469b-a58e-5f83a6d25168" />---
 
 ## 📲 Installation Guide / Суулгах заавар
 
@@ -33,6 +33,7 @@
 3. Scroll down and select **"Add to Home Screen"**.
 4. Tap **"Add"**.
 
+
 ### **For Android (Chrome):**
 1. Open [**Mongolia Map Guide**](https://mongoliamapguide.github.io/map/) in Chrome.
 2. Tap the **three dots (⋮)** in the top right.
@@ -41,6 +42,7 @@
 <p align="center">
   <img src="таны_утасны_зургийн_линк" width="300" alt="Mongolia Map Guide Mobile View">
 </p>
+<img width="853" height="1721" alt="Screenshot 2026-02-25 093333" src="https://github.com/user-attachments/assets/c559e2e7-4571-446f-b868-7160202ae72d" />
 
 ## 🛠️ Tech Stack / Технологийн шийдэл
 - **Language:** Python 3.x (Folium, Pandas)

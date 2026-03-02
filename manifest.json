@@ -1,7 +1,7 @@
 {
   "name": "Mongolia Travel Map",
   "short_name": "TravelMap",
-  "start_url": "/v_initial/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1a73e8",

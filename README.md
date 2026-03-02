@@ -1,4 +1,4 @@
-# 🇲🇳 Mongolia Map Guide: Interactive Travel Platform
+# 🇲🇳 Travel Map.MN: Interactive Travel Platform
 
 > **Your definitive digital companion for exploring the Land of the Eternal Blue Sky.**
 > *Монгол орныг танин мэдэх таны хамгийн шилдэг дижитал хөтөч.*

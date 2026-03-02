@@ -3,15 +3,15 @@
 > **Your definitive digital companion for exploring the Land of the Eternal Blue Sky.**
 > *Монгол орныг танин мэдэх таны хамгийн шилдэг дижитал хөтөч.*
 
-[![GitHub Pages](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=github)](https://mongoliamapguide.github.io/map/)
-[![PWA Ready](https://img.shields.io/badge/PWA-Ready-blue?style=for-the-badge&logo=pwa)](https://mongoliamapguide.github.io/map/)
+[![GitHub Pages](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=github)](https://travelmap.mn)
+[![PWA Ready](https://img.shields.io/badge/PWA-Ready-blue?style=for-the-badge&logo=pwa)](https://travelmap.mn)
 
 ---
 
 ## 🌟 About the Project / Төслийн тухай
-**Mongolia Map Guide** is a comprehensive interactive platform featuring over **1,651** scenic spots, historical sites, and tourist camps across Mongolia. Designed for both domestic and international travelers, it provides seamless navigation in **6 languages**.
+**Mongolia Map Guide** is a comprehensive interactive platform featuring over **1,659** scenic spots, historical sites, and tourist camps across Mongolia. Designed for both domestic and international travelers, it provides seamless navigation in **6 languages**.
 
-*Монгол орны байгаль, түүх, соёлын дурсгалт газрууд болон амралт, жуулчны баазуудыг нэгтгэсэн интерактив мэдээллийн сан юм. Нийт 1,651 объектыг багтаасан.*
+*Монгол орны байгаль, түүх, соёлын дурсгалт газрууд болон амралт, жуулчны баазуудыг нэгтгэсэн интерактив мэдээллийн сан юм. Нийт 1,659 объектыг багтаасан.*
 
 ---
 
@@ -27,14 +27,14 @@
 ## 📲 Installation Guide / Суулгах заавар
 
 ### **For iPhone / iOS (Safari):**
-1. Open [**Mongolia Map Guide**](https://mongoliamapguide.github.io/map/) in Safari.
+1. Open [**Mongolia Map Guide**](https://travelmap.mn) in Safari.
 2. Tap the **"Share"** button (square with an upward arrow).
 3. Scroll down and select **"Add to Home Screen"**.
 4. Tap **"Add"**.
 
 
 ### **For Android (Chrome):**
-1. Open [**Mongolia Map Guide**](https://mongoliamapguide.github.io/map/) in Chrome.
+1. Open [**Mongolia Map Guide**](https://travelmap.mn) in Chrome.
 2. Tap the **three dots (⋮)** in the top right.
 3. Select **"Install app"** or **"Add to Home screen"**.
 <img width="426" height="860" alt="Screenshot 2026-02-25 093333" src="https://github.com/user-attachments/assets/c559e2e7-4571-446f-b868-7160202ae72d" />
@@ -45,4 +45,4 @@
 - **Hosting:** GitHub Pages
 ---
 
-### 🚀 [View Live Project / Яг одоо үзэх](https://mongoliamapguide.github.io/map/)
+### 🚀 [View Live Project / Яг одоо үзэх](https://travelmap.mn)

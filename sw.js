@@ -1,14 +1,21 @@
-const CACHE_NAME = 'travel-map-v43'; // v1 байсныг v2 болгох
+const CACHE_NAME = 'travel-map-v44'; // Дахиад нэг нэмчихье
 const urlsToCache = [
+  '/',              // Үндсэн хаяг
   'index.html',
-  'manifest.json'
+  'manifest.json',
+  'img.png'         // Логогоо заавал кэшлэх хэрэгтэй!
 ];
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
+    caches.open(CACHE_NAME).then(cache => {
+      console.log('Opened cache');
+      return cache.addAll(urlsToCache);
+    })
   );
 });
+
+// Бусад хэсэг нь хэвээрээ байна...
 
 self.addEventListener('fetch', event => {
   event.respondWith(

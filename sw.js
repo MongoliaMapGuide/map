@@ -1,10 +1,14 @@
-const CACHE_NAME = 'travel-map-v46'; // Хувилбарыг нь нэмж шинэчлэв
+const CACHE_NAME = 'travel-map-v2';
 
 self.addEventListener('install', (event) => {
-  self.skipWaiting(); // Шинэ хувилбарыг шууд идэвхжүүлэх
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(clients.claim());
 });
 
 self.addEventListener('fetch', (event) => {
-  // Энэ хэсэг нь сайтыг PWA шалгуур хангахад тусална
+  // Энэ хэсэг хоосон байсан ч 'fetch' эвент заавал байх ёстой
   event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
 });

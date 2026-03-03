@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travel-map-v44'; // Дахиад нэг нэмчихье
+const CACHE_NAME = 'travel-map-v45'; // Дахиад нэг нэмчихье
 const urlsToCache = [
   '/',              // Үндсэн хаяг
   'index.html',

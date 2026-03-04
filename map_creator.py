@@ -235,36 +235,13 @@ m.get_root().header.add_child(folium.Element(meta_tags))
 # 1. Файл хадгалах замыг нэг хувьсагчид авъя
 output_path = os.path.join(current_dir, "index.html")
 # 🎬 Видео зааврын HTML код
-tutorial_html = """
-<style>
-    #video-chat-box { position: fixed; top: 260px; left: 10px; z-index: 10000; font-family: 'Segoe UI', Arial, sans-serif; }
-    .video-btn { background-color: #ff5722; color: white; padding: 8px 14px; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); font-weight: bold; font-size: 12px; display: flex; align-items: center; gap: 6px; border: 1px solid white; }
-    #tutorial-window { display: none; background: white; padding: 8px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); width: 320px; margin-top: 10px; border: 1px solid #ddd; overflow: hidden; }
-    .close-btn { float: right; cursor: pointer; font-size: 20px; font-weight: bold; color: #666; padding-right: 5px; }
-</style>
-<div id="video-chat-box">
-    <div class="video-btn" onclick="document.getElementById('tutorial-window').style.display='block'">
-        🎬 ▶ Ашиглах заавар
-    </div>
-    <div id="tutorial-window">
-        <span class="close-btn" onclick="document.getElementById('tutorial-window').style.display='none'">&times;</span>
-        <div style="padding: 10px; font-weight: bold; background: #f8f9fa; border-bottom: 1px solid #eee;">📖 Видео заавар</div>
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-            <iframe src="https://www.youtube.com/embed/1ju-nFngcvI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
-"""
-# 🔗 Газрын зураг руу нэмэх
-m.get_root().html.add_child(folium.Element(tutorial_html))
-# 🌐 travelmap.mn - Албан ёсны брэнд лого (Тод Улаан Pin хувилбар)
 logo_html = """
 <style>
     #brand-logo {
         position: fixed !important;
-        /* 💻 Компьютер дээр: Баруун талын цонхноос логоны тал хэмжээгээр зүүн тийш хөдөлгөв */
+        /* 💻 Компьютер дээр: Баруун талын цэснээс бүтэн логоны хэмжээгээр (220px) зүүн тийш */
         top: 10px !important; 
-        right: 170px !important; 
+        right: 220px !important; 
         z-index: 10001 !important;
         padding: 5px 12px !important;
         background: rgba(255, 255, 255, 0.95) !important;
@@ -282,8 +259,9 @@ logo_html = """
     /* 📱 Гар утсанд зориулсан байрлал */
     @media only screen and (max-width: 600px) {
         #brand-logo {
+            /* Утсан дээр: Баруун талын товчлуураас хангалттай зайтай (110px) */
             top: 10px !important; 
-            right: 85px !important; /* Утсан дээр мөн адил бага зэрэг зүүн тийш шилжүүлэв */
+            right: 110px !important; 
             width: 38px !important;
             height: 38px !important;
             padding: 0 !important;

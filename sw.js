@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travel-map-v11';
+const CACHE_NAME = 'travel-map-v12';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();

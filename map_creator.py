@@ -123,11 +123,20 @@ if __name__ == "__main__":
     # 2. ЭНД ХАРИН ШИНЭ КОДОО НЭМНЭ (Favicon болон App Icon)
     # ---------------------------------------------------------
     favicon_html = """
-    <link rel="shortcut icon" href="https://travelmap.mn/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://travelmap.mn/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://travelmap.mn/logo.png">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="TravelMap">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="logo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('sw.js', {scope: './'}).then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
     """
     m.get_root().header.add_child(folium.Element(favicon_html))
     # ---------------------------------------------------------

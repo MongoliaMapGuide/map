@@ -114,49 +114,7 @@ def add_markers_by_type(df, nature_grp, camp_grp, service_grp, transport_grp, se
 if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
     m = folium.Map(location=[47.0, 103.0], zoom_start=6, tiles=None)
-    import folium
 
-    # 1. Газрын зургаа үүсгэх хэсэг (Чиний байгаа код)
-    m = folium.Map(location=[46.8625, 103.8467], zoom_start=5)
-
-    # ---------------------------------------------------------
-    # 2. ЭНД ХАРИН ШИНЭ КОДОО НЭМНЭ (Favicon болон App Icon)
-    # ---------------------------------------------------------
-    favicon_html = """
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="logo.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('sw.js', {scope: './'}).then(function(registration) {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(err) {
-            console.log('ServiceWorker registration failed: ', err);
-          });
-        });
-      }
-    </script>
-    """
-    m.get_root().header.add_child(folium.Element(favicon_html))
-    # ---------------------------------------------------------
-
-    # 3. Логоны HTML код (Өмнө нь хийсэн right: 280px-тэй код чинь энд байна)
-    logo_html = """
-    <style>
-        #brand-logo { 
-            position: fixed !important; 
-            top: 10px !important; 
-            right: 280px !important; 
-            /* ... бусад стильүүд ... */
-        }
-    </style>
-    <div id="brand-logo" onclick="..."> ... </div>
-    """
-    m.get_root().html.add_child(folium.Element(logo_html))
-
-    # 4. Газрын зургаа хадгалах (Хамгийн сүүлийн мөр)
-    m.save("map.html")
     # 🗺️ СУУРЬ ЗУРГУУД (Terrain нэмэгдсэн)
     folium.TileLayer('OpenStreetMap', name='🌐 Street Map').add_to(m)
     folium.TileLayer(tiles='https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', attr='Google',
@@ -276,90 +234,38 @@ m.get_root().header.add_child(folium.Element(meta_tags))
 
 # 1. Файл хадгалах замыг нэг хувьсагчид авъя
 output_path = os.path.join(current_dir, "index.html")
-# 🎬 Видео зааврын HTML код
-logo_html = """
-<style>
-    #brand-logo {
-        position: fixed !important;
-        /* 💻 Компьютер дээр: Баруун талын цонхноос бүрэн холдуулж зүүн тийш шилжүүлэв */
-        top: 10px !important; 
-        right: 280px !important; /* Бүтэн логоны зайг бүрэн гаргав */
-        z-index: 10001 !important;
-        padding: 6px 15px !important;
-        background: rgba(255, 255, 255, 0.95) !important;
-        border: 2px solid #DA2032 !important;
-        border-radius: 35px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        cursor: pointer !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.25) !important;
-    }
 
-    #brand-text { font-family: 'Arial Black', sans-serif !important; font-size: 15px !important; color: #333 !important; white-space: nowrap !important; }
+# 🎬 ЭНД ВИДЕО ЗААВАР НЭМЭХ ХЭСЭГ (m.save-ийн яг өмнө)
+tutorial_html = """
+    <style>
+        #video-chat-box { position: fixed; top: 260px; left: 10px; z-index: 10000; font-family: 'Segoe UI', Arial, sans-serif; }
+        .video-btn { background-color: #ff5722; color: white; padding: 8px 14px; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); font-weight: bold; font-size: 12px; display: flex; align-items: center; gap: 6px; border: 1px solid white; }
+        #tutorial-window { display: none; background: white; padding: 8px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); width: 320px; margin-top: 10px; border: 1px solid #ddd; overflow: hidden; }
+        .close-btn { float: right; cursor: pointer; font-size: 20px; font-weight: bold; color: #666; padding-right: 5px; }
+    </style>
 
-    /* 📱 Гар утсанд зориулсан байрлал */
-    @media only screen and (max-width: 600px) {
-        #brand-logo {
-            /* Утсан дээр: Баруун талын товчлуураас бүтэн зай авлаа */
-            top: 10px !important; 
-            right: 150px !important; 
-            width: 42px !important;
-            height: 42px !important;
-            padding: 0 !important;
-            border-radius: 50% !important;
-        }
-        #brand-text { display: none !important; }
-    }
-</style>
+    <div id="video-chat-box">
+        <div class="video-btn" onclick="document.getElementById('tutorial-window').style.display='block'">
+            🎬 ▶ Ашиглах заавар
+        </div>
+        <div id="tutorial-window">
+            <span class="close-btn" onclick="document.getElementById('tutorial-window').style.display='none'">&times;</span>
+            <div style="padding: 10px; font-weight: bold; background: #f8f9fa; border-bottom: 1px solid #eee;">📖 Видео заавар</div>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                <iframe src="https://www.youtube.com/embed/1ju-nFngcvI" 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                        frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+    """
 
-<div id="brand-logo" onclick="window.open('https://travelmap.mn', '_blank')">
-    <svg width="26" height="26" viewBox="0 0 100 100">
-        <path d="M50 5 C32 5 18 19 18 37 C18 57 50 95 50 95 C50 95 82 57 82 37 C82 19 68 5 50 5 Z" fill="#DA2032"/>
-        <circle cx="50" cy="37" r="10" fill="white"/>
-    </svg>
-    <div id="brand-text">&nbsp;TRAVELMAP<span style="color: #DA2032;">.MN</span></div>
-</div>
-"""
-m.get_root().html.add_child(folium.Element(logo_html))
-import base64
+# 🔗 HTML-ийг газрын зураг руу "наах"
+m.get_root().html.add_child(folium.Element(tutorial_html))
 
-# 1. Логоны SVG код (Яг чиний хүссэн тод улаан Pin)
-svg_logo = """
-<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-    <rect width="512" height="512" rx="100" fill="white"/>
-    <path d="M256 80C184.2 80 126 138.2 126 210C126 307.5 256 432 256 432C256 432 386 307.5 386 210C386 138.2 327.8 80 256 80Z" fill="#DA2032"/>
-    <circle cx="256" cy="210" r="45" fill="white"/>
-    <text x="256" y="480" font-family="Arial Black, sans-serif" font-size="40" fill="#333" text-anchor="middle">TRAVELMAP.MN</text>
-</svg>
-"""
-
-# 2. SVG-г текстэн код (Base64) болгож хөрвүүлэх
-encoded = base64.b64encode(svg_logo.encode('utf-8')).decode('utf-8')
-logo_data_uri = f"data:image/svg+xml;base64,{encoded}"
-
-# 3. Гар утасны иконд зориулсан мэдээлэл
-app_metadata = f"""
-<link rel="icon" type="image/svg+xml" href="{logo_data_uri}">
-<link rel="apple-touch-icon" href="{logo_data_uri}">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="TravelMap.mn">
-"""
-
-# 4. Газрын зургийн Header-т нэмэх
-m.get_root().header.add_child(folium.Element(app_metadata))
-
-app_metadata = '''
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMDAiIGZpbGw9IndoaXRlIi8+CiAgICA8cGF0aCBkPSJNMjU2IDgwQzE4NC4yIDgwIDEyNiAxMzguMiAxMjYgMjEwQzEyNiAzMDcuNSAyNTYgNDMyIDI1NiA0MzJDMjU2IDQzMiAzODYgMzA3LjUgMzg2IDIxMEMzODYgMTM4LjIgMzI3LjggODAgMjU2IDgwWiIgZmlsbD0iI0RBMjAzMiIvPgogICAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjEwIiByPSI0NSIgZmlsbD0id2hpdGUiLz4KICAgIDx0ZXh0IHg9IjI1NiIgeT0iNDgwIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMzMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UUkFWRUxNQVAuTU48L3RleHQ+Cjwvc3ZnPgo=">
-<link rel="apple-touch-icon" href="data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMDAiIGZpbGw9IndoaXRlIi8+CiAgICA8cGF0aCBkPSJNMjU2IDgwQzE4NC4yIDgwIDEyNiAxMzguMiAxMjYgMjEwQzEyNiAzMDcuNSAyNTYgNDMyIDI1NiA0MzJDMjU2IDQzMiAzODYgMzA3LjUgMzg2IDIxMEMzODYgMTM4LjIgMzI3LjggODAgMjU2IDgwWiIgZmlsbD0iI0RBMjAzMiIvPgogICAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjEwIiByPSI0NSIgZmlsbD0id2hpdGUiLz4KICAgIDx0ZXh0IHg9IjI1NiIgeT0iNDgwIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMzMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UUkFWRUxNQVAuTU48L3RleHQ+Cjwvc3ZnPgo=">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="TravelMap.mn">
-'''
-m.get_root().header.add_child(folium.Element(app_metadata))
-
-# 💾 Хадгалах
+# 💾 ФАЙЛАА ХАДГАЛАХ
 m.save(os.path.join(current_dir, "index.html"))
-
 print("✅ Meta tags болон Манифест амжилттай нэмэгдлээ!")
 print("✨ Хайлт болон Terrain зураг бэлэн боллоо!")
 

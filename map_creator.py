@@ -239,31 +239,31 @@ logo_html = """
 <style>
     #brand-logo {
         position: fixed !important;
-        /* 💻 Компьютер дээр: Баруун талын цэснээс бүтэн логоны хэмжээгээр (220px) зүүн тийш */
+        /* 💻 Компьютер дээр: Баруун талын цонхноос бүрэн холдуулж зүүн тийш шилжүүлэв */
         top: 10px !important; 
-        right: 220px !important; 
+        right: 280px !important; /* Бүтэн логоны зайг бүрэн гаргав */
         z-index: 10001 !important;
-        padding: 5px 12px !important;
+        padding: 6px 15px !important;
         background: rgba(255, 255, 255, 0.95) !important;
-        border: 1.5px solid #DA2032 !important;
-        border-radius: 30px !important;
+        border: 2px solid #DA2032 !important;
+        border-radius: 35px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         cursor: pointer !important;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25) !important;
     }
 
-    #brand-text { font-family: 'Arial Black', sans-serif !important; font-size: 14px !important; color: #333 !important; white-space: nowrap !important; }
+    #brand-text { font-family: 'Arial Black', sans-serif !important; font-size: 15px !important; color: #333 !important; white-space: nowrap !important; }
 
     /* 📱 Гар утсанд зориулсан байрлал */
     @media only screen and (max-width: 600px) {
         #brand-logo {
-            /* Утсан дээр: Баруун талын товчлуураас хангалттай зайтай (110px) */
+            /* Утсан дээр: Баруун талын товчлуураас бүтэн зай авлаа */
             top: 10px !important; 
-            right: 110px !important; 
-            width: 38px !important;
-            height: 38px !important;
+            right: 150px !important; 
+            width: 42px !important;
+            height: 42px !important;
             padding: 0 !important;
             border-radius: 50% !important;
         }
@@ -272,7 +272,7 @@ logo_html = """
 </style>
 
 <div id="brand-logo" onclick="window.open('https://travelmap.mn', '_blank')">
-    <svg width="22" height="22" viewBox="0 0 100 100">
+    <svg width="26" height="26" viewBox="0 0 100 100">
         <path d="M50 5 C32 5 18 19 18 37 C18 57 50 95 50 95 C50 95 82 57 82 37 C82 19 68 5 50 5 Z" fill="#DA2032"/>
         <circle cx="50" cy="37" r="10" fill="white"/>
     </svg>

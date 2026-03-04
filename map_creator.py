@@ -259,44 +259,55 @@ tutorial_html = """
 m.get_root().html.add_child(folium.Element(tutorial_html))
 # 🌐 travelmap.mn - Албан ёсны брэнд лого (Тод Улаан Pin хувилбар)
 logo_html = """
-<div id="brand-logo" style="
-    position: fixed; 
-    top: 15px; 
-    left: 60px; 
-    z-index: 10001; 
-    padding: 8px 18px; 
-    background: white; 
-    border: 2px solid #DA2032; 
-    border-radius: 50px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
-    display: flex; 
-    align-items: center; 
-    gap: 12px; 
-    pointer-events: auto; 
-    cursor: pointer;
-    transition: all 0.3s ease;"
-    onclick="window.open('https://travelmap.mn', '_blank')"
-    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(218,32,50,0.3)';"
-    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+<style>
+    /* Ерөнхий загвар */
+    #brand-logo {
+        position: fixed;
+        top: 10px;
+        left: 50px;
+        z-index: 10001;
+        padding: 5px 10px;
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid #DA2032;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
 
-    <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    #brand-logo img { height: 20px; }
+    #brand-text { font-family: 'Arial Black', sans-serif; font-size: 14px; color: #333; }
+    #sub-text { font-size: 8px; color: #666; display: block; }
+
+    /* 📱 Гар утсанд зориулсан зохицуулалт (Дэлгэц 600px-ээс бага үед) */
+    @media only screen and (max-width: 600px) {
+        #brand-logo {
+            top: auto;
+            bottom: 20px; /* Утасны доор байрлуулбал удирдлагад саад болохгүй */
+            left: 50%;
+            transform: translateX(-50%); /* Голлуулна */
+            padding: 4px 10px;
+            opacity: 0.9;
+        }
+        #sub-text { display: none; } /* Гар утсан дээр жижиг бичгийг нууна */
+        #brand-text { font-size: 12px; }
+    }
+</style>
+
+<div id="brand-logo" onclick="window.open('https://travelmap.mn', '_blank')">
+    <svg width="18" height="18" viewBox="0 0 100 100">
         <path d="M50 5 C32 5 18 19 18 37 C18 57 50 95 50 95 C50 95 82 57 82 37 C82 19 68 5 50 5 Z" fill="#DA2032"/>
         <circle cx="50" cy="37" r="10" fill="white"/>
-        <polygon points="50,32 54,42 50,40 46,42" fill="#DA2032"/>
     </svg>
-
-    <div style="font-family: 'Arial Black', sans-serif; display: flex; flex-direction: column; justify-content: center;">
-        <div style="font-size: 18px; color: #333; line-height: 1; letter-spacing: -0.5px;">
-            TRAVELMAP<span style="color: #DA2032;">.MN</span>
-        </div>
-        <div style="font-size: 9px; color: #666; font-weight: bold; text-transform: uppercase; margin-top: 2px; letter-spacing: 1px;">
-            Interactive Guide
-        </div>
+    <div id="brand-text">
+        TRAVELMAP<span style="color: #DA2032;">.MN</span>
+        <span id="sub-text">INTERACTIVE GUIDE</span>
     </div>
 </div>
 """
-
-# Газрын зураг руу нэмэх
 m.get_root().html.add_child(folium.Element(logo_html))
 import base64
 

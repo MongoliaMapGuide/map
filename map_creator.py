@@ -114,7 +114,40 @@ def add_markers_by_type(df, nature_grp, camp_grp, service_grp, transport_grp, se
 if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
     m = folium.Map(location=[47.0, 103.0], zoom_start=6, tiles=None)
+    import folium
 
+    # 1. Газрын зургаа үүсгэх хэсэг (Чиний байгаа код)
+    m = folium.Map(location=[46.8625, 103.8467], zoom_start=5)
+
+    # ---------------------------------------------------------
+    # 2. ЭНД ХАРИН ШИНЭ КОДОО НЭМНЭ (Favicon болон App Icon)
+    # ---------------------------------------------------------
+    favicon_html = """
+    <link rel="shortcut icon" href="https://travelmap.mn/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://travelmap.mn/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://travelmap.mn/logo.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="TravelMap">
+    """
+    m.get_root().header.add_child(folium.Element(favicon_html))
+    # ---------------------------------------------------------
+
+    # 3. Логоны HTML код (Өмнө нь хийсэн right: 280px-тэй код чинь энд байна)
+    logo_html = """
+    <style>
+        #brand-logo { 
+            position: fixed !important; 
+            top: 10px !important; 
+            right: 280px !important; 
+            /* ... бусад стильүүд ... */
+        }
+    </style>
+    <div id="brand-logo" onclick="..."> ... </div>
+    """
+    m.get_root().html.add_child(folium.Element(logo_html))
+
+    # 4. Газрын зургаа хадгалах (Хамгийн сүүлийн мөр)
+    m.save("map.html")
     # 🗺️ СУУРЬ ЗУРГУУД (Terrain нэмэгдсэн)
     folium.TileLayer('OpenStreetMap', name='🌐 Street Map').add_to(m)
     folium.TileLayer(tiles='https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', attr='Google',

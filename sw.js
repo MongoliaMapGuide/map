@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travelmap-v1';
+const CACHE_NAME = 'travelmap-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -18,4 +18,7 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => response || fetch(event.request))
   );
+});
+self.addEventListener('activate', event => {
+  event.waitUntil(self.clients.claim());
 });

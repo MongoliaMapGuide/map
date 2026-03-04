@@ -260,52 +260,45 @@ m.get_root().html.add_child(folium.Element(tutorial_html))
 # 🌐 travelmap.mn - Албан ёсны брэнд лого (Тод Улаан Pin хувилбар)
 logo_html = """
 <style>
-    /* Ерөнхий загвар */
     #brand-logo {
         position: fixed;
         top: 10px;
-        left: 50px;
+        left: 55px;
         z-index: 10001;
-        padding: 5px 10px;
-        background: rgba(255, 255, 255, 0.95);
-        border: 1px solid #DA2032;
-        border-radius: 20px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        padding: 5px 12px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1.5px solid #DA2032;
+        border-radius: 30px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         display: flex;
         align-items: center;
-        gap: 5px;
+        justify-content: center; /* Голлуулах тохиргоо */
+        gap: 8px;
         cursor: pointer;
-        transition: all 0.3s ease;
     }
 
-    #brand-logo img { height: 20px; }
     #brand-text { font-family: 'Arial Black', sans-serif; font-size: 14px; color: #333; }
-    #sub-text { font-size: 8px; color: #666; display: block; }
 
-    /* 📱 Гар утсанд зориулсан зохицуулалт (Дэлгэц 600px-ээс бага үед) */
+    /* 📱 Гар утсанд зориулсан ухаалаг зохицуулалт */
     @media only screen and (max-width: 600px) {
         #brand-logo {
-            top: auto;
-            bottom: 20px; /* Утасны доор байрлуулбал удирдлагад саад болохгүй */
-            left: 50%;
-            transform: translateX(-50%); /* Голлуулна */
-            padding: 4px 10px;
-            opacity: 0.9;
+            left: 10px; /* Хажуугийн зайг багасгав */
+            padding: 8px; /* Бөөрөнхий хэлбэртэй болгоно */
+            border-radius: 50%; /* Гар утсан дээр дугуй болгоно */
+            width: 35px;
+            height: 35px;
+            gap: 0;
         }
-        #sub-text { display: none; } /* Гар утсан дээр жижиг бичгийг нууна */
-        #brand-text { font-size: 12px; }
+        #brand-text { display: none; } /* Текстийг нууна */
     }
 </style>
 
 <div id="brand-logo" onclick="window.open('https://travelmap.mn', '_blank')">
-    <svg width="18" height="18" viewBox="0 0 100 100">
+    <svg width="24" height="24" viewBox="0 0 100 100" style="display: block; margin: auto;">
         <path d="M50 5 C32 5 18 19 18 37 C18 57 50 95 50 95 C50 95 82 57 82 37 C82 19 68 5 50 5 Z" fill="#DA2032"/>
         <circle cx="50" cy="37" r="10" fill="white"/>
     </svg>
-    <div id="brand-text">
-        TRAVELMAP<span style="color: #DA2032;">.MN</span>
-        <span id="sub-text">INTERACTIVE GUIDE</span>
-    </div>
+    <div id="brand-text">TRAVELMAP<span style="color: #DA2032;">.MN</span></div>
 </div>
 """
 m.get_root().html.add_child(folium.Element(logo_html))

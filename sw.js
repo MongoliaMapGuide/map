@@ -1,9 +1,9 @@
-const CACHE_NAME = 'travelmap-v3';
+const CACHE_NAME = 'travelmap-v4';
 const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/logo.png'
+  '/img.png'
 ];
 
 self.addEventListener('install', event => {

@@ -263,26 +263,7 @@ tutorial_html = """
 
 # 🔗 HTML-ийг газрын зураг руу "наах"
 m.get_root().html.add_child(folium.Element(tutorial_html))
-# --- PWA БҮРТГҮҮЛЭХ ХЭСЭГ ---
-pwa_script = """
-<link rel="manifest" href="manifest.json">
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('sw.js').then(function(registration) {
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
-        console.log('ServiceWorker registration failed: ', err);
-      });
-    });
-  }
-</script>
-"""
-# index.html-ийн толгой (header) хэсэгт нэмэх
-m.get_root().header.add_child(folium.Element(pwa_script))
-# Энэ хэсэг байгаа эсэхийг шалгаарай, байхгүй бол нэмээрэй
-pwa_link = '<link rel="manifest" href="manifest.json">'
-m.get_root().header.add_child(folium.Element(pwa_link))
+
 # 💾 ФАЙЛАА ХАДГАЛАХ
 m.save(os.path.join(current_dir, "index.html"))
 print("✅ Meta tags болон Манифест амжилттай нэмэгдлээ!")

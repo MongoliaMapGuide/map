@@ -257,7 +257,8 @@ tutorial_html = """
                         frameborder="0" allowfullscreen>
                 </iframe>
             </div>
-        </div>
+            
+                    </div>
     </div>
     """
 

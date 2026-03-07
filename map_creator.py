@@ -266,6 +266,38 @@ m.get_root().html.add_child(folium.Element(tutorial_html))
 
 # 💾 ФАЙЛАА ХАДГАЛАХ
 m.save(os.path.join(current_dir, "index.html"))
+# 1. Файлаа унших
+with open('index.html', 'r', encoding='utf-8') as f:
+    html_content = f.read()
+
+# 2. Нэмэх кодууд (Manifest болон Service Worker)
+pwa_tags = """
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a73e8">
+    <link rel="apple-touch-icon" href="logo512.png">
+"""
+
+pwa_script = """
+    <script>
+      if ('service-worker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./service-worker.js')
+            .then(reg => console.log('Апп амжилттай бүртгэгдлээ!'))
+            .catch(err => console.log('Алдаа:', err));
+        });
+      }
+    </script>
+"""
+
+# 3. HTML-ийн толгой болон хөл хэсэгт кодыг "тарьж" өгөх
+html_content = html_content.replace('</head>', f'{pwa_tags}</head>')
+html_content = html_content.replace('</body>', f'{pwa_script}</body>')
+
+# 4. Буцааж хадгалах
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("PWA код 'index.html'-д амжилттай нэмэгдлээ!")
 print("✅ Meta tags болон Манифест амжилттай нэмэгдлээ!")
 print("✨ Хайлт болон Terrain зураг бэлэн боллоо!")
 

@@ -282,7 +282,7 @@ share_buttons_html = """
     <a href="https://api.whatsapp.com/send?text={url}" target="_blank">WhatsApp</a>
     <a href="https://www.linkedin.com/sharing/share-offsite/?url={url}" target="_blank">LinkedIn</a>
 </div>
-""".format(url="https://чиний-апп-хаяг.com") # Энд өөрийн апп-ын линкийг бичээрэй
+""".format(url="https://travelmap.mn") # Энд өөрийн апп-ын линкийг бичээрэй
 
 # Үүнийг газрын зураг руугаа нэмэх
 m.get_root().html.add_child(Element(share_buttons_html))

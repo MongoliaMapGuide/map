@@ -263,7 +263,29 @@ tutorial_html = """
 
 # 🔗 HTML-ийг газрын зураг руу "наах"
 m.get_root().html.add_child(folium.Element(tutorial_html))
+from branca.element import Element
 
+# Баруун доод буланд харагдах Share товчлууруудын код
+share_buttons_html = """
+<div style="position: fixed; 
+            bottom: 20px; right: 20px; 
+            z-index: 1000; 
+            background: white; 
+            padding: 10px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;">
+    <p style="margin: 0; font-size: 12px; font-weight: bold; text-align: center;">Share</p>
+    <a href="https://t.me/share/url?url={url}" target="_blank">Telegram</a>
+    <a href="https://api.whatsapp.com/send?text={url}" target="_blank">WhatsApp</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={url}" target="_blank">LinkedIn</a>
+</div>
+""".format(url="https://чиний-апп-хаяг.com") # Энд өөрийн апп-ын линкийг бичээрэй
+
+# Үүнийг газрын зураг руугаа нэмэх
+m.get_root().html.add_child(Element(share_buttons_html))
 # 💾 ФАЙЛАА ХАДГАЛАХ
 m.save(os.path.join(current_dir, "index.html"))
 # 1. Файлаа унших

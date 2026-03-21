@@ -1,6 +1,11 @@
 # 🇲🇳 Travel Map MN: Interactive Travel Platform
 > **Your definitive digital companion for exploring the Land of the Eternal Blue Sky.**
 > *Монгол орныг танин мэдэх таны хамгийн шилдэг дижитал хөтөч.*
+> <p align="center">
+  <img src="https://cdn-icons-png.flaticon.com/512/8201/8201556.png" width="150" alt="Travel Map MN Logo">
+  <br>
+  <b>travelmap.mn</b>
+</p>
 
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg?style=for-the-badge)](https://mongoliamapguide.github.io/map/)
 [![PWA Ready](https://img.shields.io/badge/PWA-Ready-blue.svg?style=for-the-badge)](https://mongoliamapguide.github.io/map/)

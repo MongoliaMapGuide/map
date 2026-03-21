@@ -63,3 +63,15 @@
 
 ---
 © 2026 Mongolia Map Guide Project. Created with ❤️ for Travelers.
+---
+
+## 👨‍💻 Developer & Maintainer / Хөгжүүлэгч
+**BayarChoijil** *Digital Cartographer & GIS Developer*
+
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=flat&logo=github)](https://github.com/bayarchoijil)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Travel_Map_MN-27ae60?style=flat&logo=googlemaps)](https://bayarchoijil.github.io/Travel_Map_MN/)
+
+> "Dedicated to improving Mongolian tourism infrastructure through open-source data."  
+> *Монголын аялал жуулчлалын дэд бүтцийг нээлттэй өгөгдлийн тусламжтайгаар сайжруулахад зориулав.*
+
+---

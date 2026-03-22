@@ -1,3 +1,4 @@
+
 {
   "name": "Mongolia Travel Map",
   "short_name": "TravelMap",
@@ -13,9 +14,15 @@
       "purpose": "any maskable"
     },
     {
-      "src": "logo512.png",
+      "src": "logo192.png",
       "sizes": "192x192",
       "type": "image/png"
+    },
+    {
+      "src": "logo1200x630.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }

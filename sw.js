@@ -1,15 +1,23 @@
-const CACHE_NAME = 'travelmap-v37';
+const CACHE_NAME = 'travelmap-v40';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/logo.png'
+  './',
+  './index.html',
+  './manifest.json',
+  'https://github.com/MongoliaMapGuide/map/blob/main/logo512.png?raw=true'
 ];
 
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+      .then(cache => {
+        console.log('Cache opened');
+        // addAll-ийн оронд нэг бүрчлэн нэмэх нь илүү найдвартай
+        return Promise.all(
+          urlsToCache.map(url => {
+            return cache.add(url).catch(err => console.log('Файл татахад алдаа гарлаа: ' + url));
+          })
+        );
+      })
   );
 });
 
@@ -19,6 +27,17 @@ self.addEventListener('fetch', event => {
       .then(response => response || fetch(event.request))
   );
 });
+
 self.addEventListener('activate', event => {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => self.clients.claim())
+  );
 });

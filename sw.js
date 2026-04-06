@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travelmap-v42';
+const CACHE_NAME = 'travelmap-v43';
 const urlsToCache = [
   './',
   './index.html',

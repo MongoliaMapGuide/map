@@ -24,6 +24,12 @@
       "src": "logo1200x630.png",
       "sizes": "1200x630",
       "type": "image/png",
+      "purpose": "any",
+    },
+    {
+      "src": "logo180.png",
+      "sizes": "180x180",
+      "type": "image/png",
       "purpose": "any"
     }
   ]

@@ -1,11 +1,14 @@
-const CACHE_NAME = 'travelmap-v52';
-const urlsToCache = [
-  './',
-  './index.html',
-  './manifest.json',
-  'https://github.com/MongoliaMapGuide/map/blob/main/logo512.png?raw=true'
-];
+const CACHE_NAME = 'travelmap-v53';
 
+// sw.js файл доторх URLsToCache хэсэг
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/logo192.png',  // Шинэ 192px лого (Заавал байх ёстой)
+  '/logo512.png',  // 512px лого
+  '/favicon.ico'   // Хайлтын лого
+];
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)

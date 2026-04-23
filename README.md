@@ -35,7 +35,7 @@
 ## 📸 Screenshots / Дэлгэцийн зураг
 | Modern UI / Орчин үеийн загвар | Mobile View / Гар утас |
 |---|---|
-| ![Popup Design](https://github.com/MongoliaMapGuide/map/blob/main/logo512.png?raw=true) | ![Mobile Map](https://github.com/MongoliaMapGuide/map/blob/main/logo512.png?raw=true) |
+| ![Popup Design](https://www.dropbox.com/scl/fi/g2mdjeb9i9pw8ucksi14s/desctop-screen.jpg?rlkey=qappv1nc7s02idfm3axd8bo6s&raw=1) | ![Mobile Map](https://www.dropbox.com/scl/fi/gazl9iit316068skbr6fq/mobile-screen.jpg?rlkey=yvgop57zip0hov9ern6zufg1l&raw=1) |
 *(Тайлбар: Энд өөрийн авсан гоё скриншотуудаа линкээр оруулаарай)*
 
 ---

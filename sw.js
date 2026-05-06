@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travelmap-v63';
+const CACHE_NAME = 'travelmap-v64';
 // sw.js файл доторх URLsToCache хэсэг
 const urlsToCache = [
   '/',
@@ -7,6 +7,7 @@ const urlsToCache = [
   '/logo192.png',  // Шинэ 192px лого (Заавал байх ёстой)
   '/logo512.png',  // 512px лого
   '/favicon.ico'   // Хайлтын лого
+  '/img/qr-code.png'
 ];
 self.addEventListener('install', event => {
 self.skipWaiting();

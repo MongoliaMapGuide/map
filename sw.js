@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travelmap-v62';
+const CACHE_NAME = 'travelmap-v63';
 // sw.js файл доторх URLsToCache хэсэг
 const urlsToCache = [
   '/',

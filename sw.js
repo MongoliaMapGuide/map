@@ -1,37 +1,27 @@
-const CACHE_NAME = 'travelmap-v64';
-// sw.js файл доторх URLsToCache хэсэг
+const CACHE_NAME = 'travelmap-v65';
+
 const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/logo192.png',  // Шинэ 192px лого (Заавал байх ёстой)
-  '/logo512.png',  // 512px лого
-  '/favicon.ico'   // Хайлтын лого
-  '/img/qr-code.png'
+  '/logo192.png',
+  '/logo512.png',
+  '/favicon.ico'
 ];
+
+// 1. Суурилуулах (Install) - Шинэ хувилбарыг шууд идэвхжүүлнэ
 self.addEventListener('install', event => {
-self.skipWaiting();
+  self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Cache opened');
-        // addAll-ийн оронд нэг бүрчлэн нэмэх нь илүү найдвартай
-        return Promise.all(
-          urlsToCache.map(url => {
-            return cache.add(url).catch(err => console.log('Файл татахад алдаа гарлаа: ' + url));
-          })
-        );
-      })
+    caches.open(CACHE_NAME).then(cache => {
+      return Promise.all(
+        urlsToCache.map(url => cache.add(url).catch(err => console.log('Файл татахад алдаа: ' + url)))
+      );
+    })
   );
 });
 
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => response || fetch(event.request))
-  );
-});
-
+// 2. Идэвхжүүлэх (Activate) - Хуучин кэшийг шууд устгах
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -43,5 +33,19 @@ self.addEventListener('activate', event => {
         })
       );
     }).then(() => self.clients.claim())
+  );
+});
+
+// 3. Мэдээлэл татах (Fetch) - Хамгийн чухал хэсэг!
+// Эхлээд серверээс (Network) шалгана, сүлжээгүй бол кэшээс уншина.
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    fetch(event.request)
+      .then(response => {
+        return response; // Сервер ажиллаж байвал шинэ мэдээллийг өгнө.
+      })
+      .catch(() => {
+        return caches.match(event.request); // Сүлжээгүй үед л кэшээ ашиглана.
+      })
   );
 });

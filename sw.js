@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travelmap-v58';
+const CACHE_NAME = 'travelmap-v59';
 // sw.js файл доторх URLsToCache хэсэг
 const urlsToCache = [
   '/',
@@ -9,6 +9,7 @@ const urlsToCache = [
   '/favicon.ico'   // Хайлтын лого
 ];
 self.addEventListener('install', event => {
+self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {

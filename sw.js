@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travelmap-v71';
+const CACHE_NAME = 'travelmap-v72';
 
 const urlsToCache = [
   '/',
@@ -6,6 +6,7 @@ const urlsToCache = [
   '/manifest.json',
   '/logo192.png',
   '/logo512.png',
+  '/logo180.png',
   '/logo1200x630.png',
   '/favicon.ico'
 ];

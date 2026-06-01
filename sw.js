@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travelmap-v76';
+const CACHE_NAME = 'travelmap-v71';
 
 const urlsToCache = [
   '/',
@@ -6,6 +6,7 @@ const urlsToCache = [
   '/manifest.json',
   '/logo192.png',
   '/logo512.png',
+  '/Logo1200x630.png',
   '/favicon.ico'
 ];
 
@@ -36,36 +37,16 @@ self.addEventListener('activate', event => {
   );
 });
 
-// 3. Мэдээлэл татах (Fetch) - Сүлжээний гацалтаас бүрэн хамгаалсан хувилбар ⚡
+// 3. Мэдээлэл татах (Fetch) - Хамгийн чухал хэсэг!
+// Эхлээд серверээс (Network) шалгана, сүлжээгүй бол кэшээс уншина.
 self.addEventListener('fetch', event => {
-  // Зөвхөн http эсвэл https хүсэлтүүдийг барина (chrome-extension болон бусад зүйлсийг алгасна)
-  if (!event.request.url.startsWith('http')) return;
-
   event.respondWith(
     fetch(event.request)
       .then(response => {
-        // Хэрэв сервер зөв хариу өгсөн бол (status 200) шууд буцаана
-        if (response && response.status === 200) {
-          return response;
-        }
-        // Хэрэв 404, 400 зэрэг алдаа ирвэл кэшээс хайж үзнэ
-        return caches.match(event.request).then(cachedResponse => {
-          return cachedResponse || response; // Кэшид байвал кэшийг, байхгүй бол уг алдааны хариуг хэвээр нь буцаана
-        });
+        return response; // Сервер ажиллаж байвал шинэ мэдээллийг өгнө.
       })
       .catch(() => {
-        // Сүлжээ бүрмөсөн тасрах эсвэл сүлжээний ноцтой алдаа үед
-        return caches.match(event.request).then(cachedResponse => {
-          if (cachedResponse) {
-            return cachedResponse;
-          }
-          // Кэшид ч байхгүй, сүлжээ ч байхгүй бол хоосон хариу буцааж хөтөчийг гацахаас аварна ✨
-          return new Response('Сүлжээний алдаа эсвэл файл олдсонгүй', {
-            status: 404,
-            statusText: 'Not Found',
-            headers: new Headers({ 'Content-Type': 'text/plain; charset=utf-8' })
-          });
-        });
+        return caches.match(event.request); // Сүлжээгүй үед л кэшээ ашиглана.
       })
   );
 });

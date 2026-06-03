@@ -19,9 +19,9 @@
 
 ## 🌟 About the Project / Төслийн тухай
 
-**Travel Map MN** is a comprehensive, high-performance interactive platform featuring over **1,659+** scenic spots, historical sites, and tourist camps across Mongolia. Designed seamlessly for both domestic and international travelers, it provides real-time navigation and offline capability across **6 global languages**.
+**Travel Map MN** is a comprehensive, high-performance interactive platform featuring over **1,800+** scenic spots, historical sites, and tourist camps across Mongolia. Designed seamlessly for both domestic and international travelers, it provides real-time navigation and offline capability across **6 global languages**.
 
-Монгол орны байгаль, түүх, соёлын дурсгалт газрууд болон амралт, жуулчны баазуудыг нэгтгэсэн интерактив мэдээллийн сан юм. Нийт **1,659** гаруй объектыг багтаасан бөгөөд аялагчдад зориулсан бүрэн хэмжээний дижитал гарын авлага болно.
+Монгол орны байгаль, түүх, соёлын дурсгалт газрууд болон амралт, жуулчны баазуудыг нэгтгэсэн интерактив мэдээллийн сан юм. Нийт **1,800** гаруй объектыг багтаасан бөгөөд аялагчдад зориулсан бүрэн хэмжээний дижитал гарын авлага болно.
 
 ---
 
@@ -41,7 +41,7 @@
 
 | Modern UI / Орчин үеийн загвар | Mobile View / Гар утас |
 |:---:|:---:|
-| ![Popup Design]([https://www.dropbox.com/scl/fi/g2mdjeb9i9pw8ucksi14s/desctop-screen.jpg?rlkey=qappv1nc7s02idfm3axd8bo6s&raw=1](https://www.dropbox.com/scl/fi/ss1ozo3lbcvj4dt81c3i7/.png?rlkey=ltg5yk5cxoy8bocvtrs8t11tu&dl=0)) | ![Mobile Map]([https://www.dropbox.com/scl/fi/gazl9iit316068skbr6fq/mobile-screen.jpg?rlkey=yvgop57zip0hov9ern6zufg1l&raw=1](https://www.dropbox.com/scl/fi/ntqz2tqxvvcibfssodxiv/.jpg?rlkey=8wfzf5hromj964k3i82szzfel&dl=0)) |
+| ![Popup Design](https://www.dropbox.com/scl/fi/ss1ozo3lbcvj4dt81c3i7/.png?rlkey=ltg5yk5cxoy8bocvtrs8t11tu&raw=1)] | ![Mobile Map](https://www.dropbox.com/scl/fi/ntqz2tqxvvcibfssodxiv/.jpg?rlkey=8wfzf5hromj964k3i82szzfel&raw=1)] |
 
 ---
 

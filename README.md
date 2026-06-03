@@ -28,7 +28,7 @@
 ## ✨ Key Features / Гол онцлогууд
 
 * 🔍 **Smart Search:** Search effortlessly by destination names in both Mongolian and English.
-* 📍 **1,659+ Verified POIs:** A curated database containing tourist resorts, natural landmarks, historical monuments, and transport infrastructure.
+* 📍 **1,800+ Verified POIs:** A curated database containing tourist resorts, natural landmarks, historical monuments, and transport infrastructure.
 * 🌍 **Full Multilingual UI:** Native support for 6 languages: Mongolian (🇲🇳), English (🇺🇸), Korean (🇰🇷), Japanese (🇯🇵), Chinese (🇨🇳), and Russian (🇷🇺).
 * 🖼️ **Premium Popups:** Dynamic cards featuring real, authentic photography, contact numbers, and specific region details for every single location.
 * 🛰️ **Advanced Basemaps:** Toggle easily between Street Maps, OpenTopoMap, Terrain models, and high-definition Satellite Imagery.

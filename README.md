@@ -56,7 +56,7 @@
 ### 🤖 For Android (Chrome)
 1. Open [Travel Map MN](https://mongoliamapguide.github.io/map/) inside the **Chrome** browser.
 2. Tap the **three dots menu (⋮)** in the top right corner.
-3. Select **"Install app"** or **"Add to Home screen"** from the dropdown menu.
+3. Select **"Install app"** or **"Install and create shortcut"** from the dropdown menu.
 
 ---
 
